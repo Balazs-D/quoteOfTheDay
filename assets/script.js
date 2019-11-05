@@ -22,10 +22,7 @@ const quoteInput = document.querySelector(".quote-input")
 
 // =============================================================== functions
 
-const init = () => {
-    quoteInput.textContent = quotes[randomNum()]
 
-}
 
 let randomNum = () => {
     return Math.floor(Math.random() * quotes.length)
@@ -33,6 +30,8 @@ let randomNum = () => {
 
 const gettingRndQuote = () => {
     quoteInput.textContent = quotes[randomNum()]
+    quoteInput.classList.add("text-body", "font-weight-bold")
+
 }
 
     button.addEventListener('click', gettingRndQuote)
